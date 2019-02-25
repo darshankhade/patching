@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   remote_user: darshankhade1
+   become: ture
+   roles:
+     - verify

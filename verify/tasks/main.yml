@@ -1,0 +1,19 @@
+---
+- name: verify nginx installation
+  service:
+    name: nginx
+  register: result
+ 
+- debug:
+    msg: Nginx Installed Sucessfully
+  when: result.status.ActiveState == "active"
+
+- name: verify mysql installation
+  service:
+    name: mysql
+  register: result2
+
+- debug:
+    msg: MySql Installed Sucessfully
+  when: result2.status.ActiveState == "active"
+

@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: darshankhade1
+ # become: true
+#  ansible_user: darshankhade1
+  roles:
+    - sample
+
